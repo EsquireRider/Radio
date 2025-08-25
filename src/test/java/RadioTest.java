@@ -171,7 +171,7 @@ public class RadioTest {
     public void testDefaultNumberOfStation() {
         Radio radio = new Radio();
 
-        Assertions.assertEquals(10, radio.getMaxStationRadio());
+        Assertions.assertEquals(10, radio.getNumberOfStations());
     }
 
     @Test
@@ -194,16 +194,13 @@ public class RadioTest {
         Assertions.assertEquals(9, radio.getNumberRadio());
     }
 
-    @Test
-    public void testRealMaxStationRadio() {
-        Radio radio = new Radio(10);
-
-        Assertions.assertEquals(9, radio.getRealMaxStationRadio());
-    }
 
     @Test
     public void testInvalidNumberOfStationsConstructor() {
-        Radio radio = new Radio(-5);
-        Assertions.assertEquals(10, radio.getMaxStationRadio());
+        Radio radio = new Radio(10);
+
+        radio.setNumberRadio(-5);
+
+        Assertions.assertEquals(0, radio.getNumberRadio());
     }
 }
