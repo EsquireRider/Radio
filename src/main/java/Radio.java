@@ -8,7 +8,7 @@ public class Radio {
         if (numberOfStations > 0) {
             this.maxStationRadio = numberOfStations - 1;
         } else {
-            this.maxStationRadio = 9; // Default value when numberOfStations is invalid
+            this.maxStationRadio = 9;
         }
         this.minStationRadio = 0;
     }
